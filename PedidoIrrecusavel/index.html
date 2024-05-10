@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O grande pedido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <p>Me paga um lanche?</p>
+        <div class="buttons-container">
+            <button>
+                <a onclick="obg()">Sim</a>
+            </button>
+            <button id="no" onclick="chato()">Não</button>
+        </div>
+    </div>    
+</body>
+<script>
+    const botao = document.getElementById('no');
+    const alt = window.innerHeight - 50; // o -50 serve para evitar que o elemento saia da tela
+    const larg = window.innerWidth - 50; // o -50 serve para evitar que o elemento saia da tela
+
+    botao.addEventListener('mouseover', ()=>{
+        botao.style.position = 'absolute';
+        botao.style.top = Math.random() * alt + "px";
+        botao.style.left = Math.random() * larg + "px";
+        })
+
+    function obg() {
+        window.alert('Obrigado.')
+    }
+    function chato() {
+        window.alert('Chatão mané.')
+    }
+</script>
+</html>
